@@ -1,0 +1,19 @@
+{
+    "items": [
+      {"type":"monke", "price":"$14.99", "name":"Flying Hat Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$19.99", "name":"Blinded Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$14.99", "name":"Rainbow Teeth Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$9.99", "name":"Boring Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$14.99", "name":"Military Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$49.99", "name":"King Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$19.99", "name":"Atreus Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$19.99", "name":"Soldier Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"monke", "price":"$14.99", "name":"Loving Monke", "path":"../monkes/frame_0_delay-0.15s.gif"},
+      {"type":"Coffee", "price":"$14.99", "name":"Coffee Duck", "path":"../coffees/coffee_0.gif"},
+      {"type":"Coffee", "price":"$9.99", "name":"Coffee Bear", "path":"../coffees/coffee_0.gif"},
+      {"type":"Coffee", "price":"$49.99", "name":"Coffee GOD", "path":"../coffees/coffee_0.gif"},
+      {"type":"Amogus", "price":"UNDEFINED", "name":"Amogus Sus", "path":"../images/amogus.jpeg"}
+
+    ]
+  }
+  

@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* The whole nav */
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 15vw;
+    margin-bottom: 1.5rem;
+  }
+  
+  nav ul{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10vh 0 0 0;
+    padding: 0;
+    list-style: none;
+    border-bottom: rgb(101, 101, 101) solid 2px;
+    width: 50vw;
+  }
+  nav li {
+    display: inline-block;
+    padding-bottom: 1px;
+  }
+  
+  .Types {
+    color: rgb(101, 101, 101);
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 3vw ;
+  }
+  
+  .Types:hover {
+    color:#3cdfff;
+    border-bottom: #3cdfff solid 5px;
+    transition: 0.4s;
+  }
+
+  #SELECTED {
+    color:#3cdfff;
+    border-bottom: #3cdfff solid 5px;
+  }
+
+/* The shop */
+#shop-content {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(150px, 1fr));
+    place-items: center;
+}
+.product-box {
+    position: relative;
+    gap: 1.5rem;
+    margin: 10px 0;  
+    border-bottom: 5px solid lightgrey;
+}
+
+.product-box:hover {
+    border-bottom: 5px solid black;
+    transition: 1s;
+    
+}
+
+.product-img {
+    width: 25vw;
+    height: auto;
+    margin: 0;
+}
+
+.product-title {
+    margin: 0;
+    font-size: 2vw;
+    font-weight: 700;
+    
+}
+
+.price {
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+.cart-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 2vw;
+    height: auto;
+    background: lightgrey;
+    padding: 10px;
+}
+
+.cart-img:hover {
+    background: #3cdfff;
+    transition: 0.4s;
+}
