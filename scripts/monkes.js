@@ -22,29 +22,31 @@ var shop_content = document.getElementById("shop-content");
 
 for (let i = 0; i < data["items"].length; i++) {
     const element = data["items"][i];
-    //Create product-box div
-    var box = document.createElement("div");
-    box.className = "product-box";
-    shop_content.appendChild(box);
-    //add image
-    var img = document.createElement("img");
-    img.className = "product-img";
-    img.src = element["path"];
-    box.appendChild(img);
-    //add product-title h2
-    var h2 = document.createElement("h2")
-    h2.className = "product-title";
-    h2.innerHTML = element["name"]
-    box.appendChild(h2);
-    //add price span
-    var span = document.createElement("span");
-    span.className = "price";
-    span.innerHTML = element["price"]
-    box.appendChild(span);
-    //add cart img
-    var cart_img = document.createElement("img");
-    cart_img.className = "cart-img";
-    cart_img.src = "../images/icons/bx-shopping-bag.svg";
-    box.appendChild(cart_img)
+    if (element["type"] === "monke"){
+        //Create product-box div
+        var box = document.createElement("div");
+        box.className = "product-box";
+        shop_content.appendChild(box);
+        //add image
+        var img = document.createElement("img");
+        img.className = "product-img";
+        img.src = element["path"];
+        box.appendChild(img);
+        //add product-title h2
+        var h2 = document.createElement("h2")
+        h2.className = "product-title";
+        h2.innerHTML = element["name"]
+        box.appendChild(h2);
+        //add price span
+        var span = document.createElement("span");
+        span.className = "price";
+        span.innerHTML = element["price"]
+        box.appendChild(span);
+        //add cart img
+        var cart_img = document.createElement("img");
+        cart_img.className = "cart-img";
+        cart_img.src = "../images/icons/bx-shopping-bag.svg";
+        box.appendChild(cart_img)
+    }
 }
 

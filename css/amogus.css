@@ -78,10 +78,19 @@ nav li {
 
 /* The shop */
 #shop-content {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 1fr));
-  place-items: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
+
+#announcement {
+    font-size: 5rem;
+    color: red;
+    transition: color 0.1s;
+    margin-top: 0;
+}
+
 .product-box {
   position: relative;
   gap: 1.5rem;
