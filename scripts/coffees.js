@@ -50,3 +50,12 @@ for (let i = 0; i < data["items"].length; i++) {
     }
 }
 
+// Get the button and iframe elements
+const openCartButton = document.getElementById("open-cart-button");
+const cartIframe = document.getElementById("cart-iframe");
+
+// Add an event listener to the button
+openCartButton.addEventListener("click", function () {
+  // Display the iframe
+  cartIframe.style.display = "block";
+});

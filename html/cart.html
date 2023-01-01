@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <!-- Include any CSS or JavaScript files here -->
+    <link rel="stylesheet" type="text/css" href="../css/cart.css">
+  </head>
+  <body>
+    <!-- Container element for the shopping cart -->
+    <div id="cart">
+      <!-- Button to close the iframe -->
+      <button onclick="closeIFrame()">Close Iframe</button>
+
+      
+      <!-- Elements for each item in the cart -->
+      <section id=cart-content>
+        
+      </section>
+      <!-- Form for checkout -->
+      <form id="checkout-form">
+        <!-- Input elements for customer information -->
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <input type="tel" placeholder="Phone">
+        <!-- Button to submit the form -->
+        <button type="submit">Checkout</button>
+      </form>
+    </div>
+    
+    <script src="../scripts/cart.js"></script>
+      </body>
+</html>
