@@ -55,23 +55,6 @@ function submitOrder() {
   cartIframe.style.display = "none";
 }
 
-// Get the iframe and button elements
-const cartIframe = document.getElementById("cart-iframe");
-const closeCartButton = cartIframe.contentWindow.document.getElementById("close-cart-button");
-
-// Add an event listener to the button
-closeCartButton.addEventListener("click", function() {
-  // Hide the iframe
-  cartIframe.style.display = "none";
-});
-
-function closeIFrame() {
-   // Get the iframe element
-  var iframe = window.parent.document.getElementById("cart-iframe");
-  
-  // Hide the iframe by setting the display attribute to none
-  iframe.style.display = "none";
-  }
 
 function displayItems(items) {
   for (let i = 0; i < items.length; i++) {
@@ -82,14 +65,17 @@ function displayItems(items) {
 
     const itemName = document.createElement('p');
     itemName.textContent = item.name;
+    itemName.className = "item-name";
     itemContainer.appendChild(itemName);
 
     const itemPrice = document.createElement('p');
     itemPrice.textContent = item.price;
+    itemPrice.className = "item-price";
     itemContainer.appendChild(itemPrice);
 
     const itemImage = document.createElement('img');
     itemImage.src = item.path;
+    itemImage.className = "item-img";
     itemContainer.appendChild(itemImage);
     const cart_content = document.getElementById("cart-content");
     cart_content.appendChild(itemContainer);

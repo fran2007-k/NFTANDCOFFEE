@@ -115,7 +115,7 @@ for (let i = 0; i < data["items"].length - 1; i++) {
 }
 
 // Get the button and iframe elements
-const openCartButton = document.getElementById("open-cart-button");
+const toggleCartButton = document.getElementById("toggle-cart-button");
 const cartIframe = document.getElementById("cart-iframe");
 
 function addToCart(item) {
@@ -129,21 +129,51 @@ function addToCart(item) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-function showPopup() {
+/* function showPopup() {
   // Create a new window and set the dimensions
   var popupWindow = window.open("", "Popup Window", "width=600,height=400");
+
+  //Get file path
+  const domain = window.location.origin;
 
   // Create an iframe and append it to the popup window
   var iframe = document.createElement("iframe");
   iframe.id = "cart-iframe";
-  iframe.src = "html/cart.html";
-  iframe.style.width = "100%";
-  iframe.style.height = "100%";
-  iframe.style.border = "none";
+  iframe.src = domain + "/html/cart";
   popupWindow.document.body.appendChild(iframe);
-}
+} 
 
 // Show the popup when the button is clicked
 document
   .getElementById("open-cart-button")
   .addEventListener("click", showPopup);
+*/
+
+//Get domain with protocol
+const domain = window.location.origin;
+
+//Get cart section
+var cart_section = document.getElementById("cart");
+// Create an iframe and append it to the cart section
+var iframe = document.createElement("iframe");
+iframe.id = "cart-iframe";
+iframe.src = domain + "/html/cart";
+cart.append(iframe);
+  
+function toggleIFrame() {
+// Get the iframe element
+var iframe = window.parent.document.getElementById("cart-iframe");
+if (iframe.src === "") {
+  iframe.src = domain + "/html/cart";
+} else {
+// Hide the iframe by setting the src attribute to an empty string
+iframe.src = "";
+}
+}
+/*
+// Add an event listener to the button
+toggleCartButton.addEventListener("click", function() {
+  // Hide the iframe
+  cartIframe.style.display = "none";
+});
+*/
