@@ -38,7 +38,7 @@ body {
 
 /* container of shop and cart */
 .main {
-  display: flex;
+  display: default;
 }
 
 #cart {

@@ -164,7 +164,7 @@ function toggleIFrame() {
 // Get the iframe element
 var iframe = window.parent.document.getElementById("cart-iframe");
 if (iframe.src === "") {
-  iframe.src = domain + "/html/cart";
+  iframe.src = "NFTANDCOFFEE\html\cart.html";
 } else {
 // Hide the iframe by setting the src attribute to an empty string
 iframe.src = "";
@@ -177,3 +177,13 @@ toggleCartButton.addEventListener("click", function() {
   cartIframe.style.display = "none";
 });
 */
+
+document.getElementById('toggle-cart-button').addEventListener('click', function() {
+  var iframe = document.getElementById('cart');
+  iframe.style.width = '0';
+  var main = document.getElementsByClassName('main')[0];
+  main.style.display = 'default';
+  var shop = document.getElementsByTagName('nav')[0];
+  shop.style.display = 'flex';
+  shop.style.justifyContent = 'center';
+});

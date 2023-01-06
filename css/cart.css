@@ -18,7 +18,7 @@ body {
 
 /* Style the appearance of the cart */
 #cart {
-  position
+  /*position*/
   font-family: sans-serif;
   display: flex;
   flex-direction: column;
