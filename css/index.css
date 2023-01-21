@@ -41,12 +41,8 @@ body {
   display: default;
 }
 
-#cart {
-  width: 30%;
-}
-
 .shop {
-  width: 70%;
+  width: 100%;
 }
 
 #cart-iframe {

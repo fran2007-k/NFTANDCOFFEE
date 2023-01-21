@@ -1,9 +1,10 @@
 displayItems(JSON.parse(localStorage.getItem("cart")) || []);
 // Add event listeners to the form and buttons in the iframe
+var cartIframe = document.getElementById("cart");
 cartIframe.addEventListener("load", function() {
   // Get the form and button elements
-  const checkoutForm = cartIframe.contentWindow.document.getElementById("checkout-form");
-  const submitButton = cartIframe.contentWindow.document.querySelector("#checkout-form button[type='submit']");
+  const checkoutForm = cartIframe.document.getElementById("checkout-form");
+  const submitButton = cartIframe.document.querySelector("#checkout-form button[type='submit']");
   
   // Add an event listener to the submit button
   submitButton.addEventListener("click", function(event) {
@@ -21,9 +22,9 @@ cartIframe.addEventListener("load", function() {
 // Function to validate the form
 function validateForm() {
   // Get the input elements
-  const nameInput = cartIframe.contentWindow.document.querySelector("#checkout-form input[type='text']");
-  const emailInput = cartIframe.contentWindow.document.querySelector("#checkout-form input[type='email']");
-  const phoneInput = cartIframe.contentWindow.document.querySelector("#checkout-form input[type='tel']");
+  const nameInput = cartIframe.document.querySelector("#checkout-form input[type='text']");
+  const emailInput = cartIframe.document.querySelector("#checkout-form input[type='email']");
+  const phoneInput = cartIframe.document.querySelector("#checkout-form input[type='tel']");
   
   // Validate the input values
   if (nameInput.value === "") {

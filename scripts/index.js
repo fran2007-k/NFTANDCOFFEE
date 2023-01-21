@@ -157,18 +157,25 @@ var cart_section = document.getElementById("cart");
 // Create an iframe and append it to the cart section
 var iframe = document.createElement("iframe");
 iframe.id = "cart-iframe";
-iframe.src = domain + "/html/cart";
-cart.append(iframe);
+cart_section.append(iframe);
   
 function toggleIFrame() {
-// Get the iframe element
-var iframe = window.parent.document.getElementById("cart-iframe");
-if (iframe.src === "") {
-  iframe.src = "NFTANDCOFFEE\html\cart.html";
-} else {
-// Hide the iframe by setting the src attribute to an empty string
-iframe.src = "";
-}
+  // Get the iframe element
+  var iframe = window.parent.document.getElementById("cart-iframe");
+  var main = document.getElementsByClassName("main")[0];
+  var cart = document.getElementById("cart");
+  if (iframe.src !== "../html/cart.html") {
+    iframe.src = "../html/cart.html";
+    main.style.display = "flex";
+    main.style.flexDirection = "column";
+    iframe.style.width = "100%";
+    cart.style.width = "100%";
+  } else if (iframe.src === "../html/cart.html"){
+    // Hide the iframe by setting the src attribute to an empty string
+    iframe.src = "";
+    iframe.style.width = "0";
+    cart.style.width = "0";
+  }
 }
 /*
 // Add an event listener to the button
